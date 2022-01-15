@@ -11,6 +11,9 @@
 	--accent-color: #ff3e00;
 	--heading-color: rgba(0, 0, 0, 0.7);
 	--text-color: #444444;
+	--color-present: #538d4e;
+	--color-correct: #b59f3b;
+	--color-absent: #d8d8d8;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
 	--column-width: 42rem;
 	--column-margin-top: 4rem;

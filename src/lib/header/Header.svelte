@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from './logo.png';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href="/">
+			<img src={logo} alt="PureFlow" />
 		</a>
 	</div>
 
@@ -18,9 +18,6 @@
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -40,8 +37,8 @@
 	}
 
 	.corner {
-		width: 3em;
-		height: 3em;
+		width: 4rem;
+		height: 4rem;
 	}
 
 	.corner a {
@@ -53,8 +50,8 @@
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 6rem;
+		height: 6rem;
 		object-fit: contain;
 	}
 
@@ -65,8 +62,8 @@
 	}
 
 	svg {
-		width: 2em;
-		height: 3em;
+		width: 2rem;
+		height: 3rem;
 		display: block;
 	}
 
@@ -78,7 +75,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
+		height: 3rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -108,12 +105,12 @@
 		display: flex;
 		height: 100%;
 		align-items: center;
-		padding: 0 1em;
+		padding: 0 1rem;
 		color: var(--heading-color);
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 0.8rrem;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.1rem;
 		text-decoration: none;
 		transition: color 0.2s linear;
 	}
