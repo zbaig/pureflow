@@ -6,8 +6,8 @@ const config = {
 	preprocess: preprocess(),
 	// Comment the paths if wants to run in dev mode.
 	paths: {
-		base: '/pureflow/build',
-		assets: '/pureflow/build'
+		base: '/pureflow',
+		assets: '/pureflow'
 	},
 	kit: {
 		adapter: adapter(),

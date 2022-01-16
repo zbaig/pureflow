@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>PureFlow</title>
 </svelte:head>
 
 <section>
