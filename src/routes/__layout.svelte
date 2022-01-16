@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-	<p>visit <a href="/about">Home</a> to learn about us</p>
+	<p>visit <a href="/about">About Us Page</a> to learn about us</p>
 </footer>
 
 <style>

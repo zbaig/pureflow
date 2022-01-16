@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './logo.png';
+	import { assets } from '$app/paths';
 </script>
 
 <header>
 	<div class="corner">
 		<a href="/">
-			<img src={logo} alt="PureFlow" />
+			<img src={`.${assets}/logo.png`} alt="PureFlow" />
 		</a>
 	</div>
 
@@ -108,7 +108,7 @@
 		padding: 0 1rem;
 		color: var(--heading-color);
 		font-weight: 700;
-		font-size: 0.8rrem;
+		font-size: 0.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		text-decoration: none;
