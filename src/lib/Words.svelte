@@ -31,22 +31,23 @@
 		}
 		console.log('row1::', row1)
 	};
-	const init = (val, elId) => {
+	const init = (val, elId, prevElId) => {
 		val != '' && (document.getElementById(elId).focus())
+		val == '' && (document.getElementById(prevElId).focus())
 	}
 </script>
 <div class='board'>
 		<div class='words'>
 			{#each row1 as w, idx}
 				<div class='words-viewport words-viewport-{w.status}'>
-					<input id={`row1${idx}`} bind:value={w.val} maxlength='1' disabled={w.disabled} on:input={init(w.val, `row1${idx<3?idx+1:3}`)} />
+					<input id={`row1${idx}`} bind:value={w.val} maxlength='1' disabled={w.disabled} on:input={init(w.val, `row1${idx<3?idx+1:3}`, `row1${idx>0?idx-1:0}`)} />
 				</div>
 			{/each}
 		</div>
 	<div class='words'>
 		{#each row2 as w, idx}
 			<div class='words-viewport'>
-				<input id={`row2${idx}`} bind:value={w.val} disabled={w.disabled} on:input={init(w.val, `row2${idx<3?idx+1:3}`)}/>
+				<input id={`row2${idx}`} bind:value={w.val} disabled={w.disabled} on:input={init(w.val, `row2${idx<3?idx+1:3}`, `row2${idx>0?idx-1:0}`)}/>
 			</div>
 		{/each}
 	</div>
