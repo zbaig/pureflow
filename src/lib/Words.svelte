@@ -31,19 +31,22 @@
 		}
 		console.log('row1::', row1)
 	};
+	const init = (val, elId) => {
+		val != '' && (document.getElementById(elId).focus())
+	}
 </script>
 <div class='board'>
 		<div class='words'>
-			{#each row1 as w}
+			{#each row1 as w, idx}
 				<div class='words-viewport words-viewport-{w.status}'>
-					<input bind:value={w.val} maxlength='1' disabled={w.disabled}/>
+					<input id={`row1${idx}`} bind:value={w.val} maxlength='1' disabled={w.disabled} on:input={init(w.val, `row1${idx<3?idx+1:3}`)} />
 				</div>
 			{/each}
 		</div>
 	<div class='words'>
-		{#each row2 as w}
+		{#each row2 as w, idx}
 			<div class='words-viewport'>
-				<input bind:value={w.val} disabled={w.disabled}/>
+				<input id={`row2${idx}`} bind:value={w.val} disabled={w.disabled} on:input={init(w.val, `row2${idx<3?idx+1:3}`)}/>
 			</div>
 		{/each}
 	</div>
